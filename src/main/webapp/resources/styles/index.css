@@ -1,0 +1,67 @@
+p, h1, h2, h3, h4, h5, label, a, li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+	overflow: hidden;
+}
+
+#logo {
+	padding-left: 25%;
+}
+
+.header {
+	border-bottom: solid black;
+    padding-bottom: 30px;
+	overflow: hidden;
+}
+
+.buttons {
+	float: right;
+}
+
+.login {
+	float: right;
+}
+
+#logo {
+		float: left;
+}
+.login {
+	width: 30 %;
+	float: right;
+}
+.products ,
+.homeInfo {
+	width: 70 %;
+	float: left;
+	padding-top: 30px;
+}
+/*START BUTTONS */
+.buttons li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: #333333;
+    margin-right: 30px;
+    width: 150px;
+    line-height: 60px;
+}
+.buttons li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+ 
+.buttons li a:hover {
+    text-decoratiofn: none;
+    color: #FFFFFF;
+    background-color: #FF0000;
+}
+/*END BUTTONS */
+
+/*START LISTS */
+.productsDisplay ul {
+	list-style-type: circle;
+	padding-left: 30px;
+}
+/*END BUTTONS */
