@@ -40,7 +40,7 @@ public class UsuariosRegistrarController {
         // for testing purpose:
         System.out.println("dni: " + user.getDni());
         System.out.println("email: " + user.getEmail());
-        System.out.println("contraseña: " + user.getContraseña());
+        System.out.println("contraseña: " + user.getContrasena());
         System.out.println("tipo: " + user.getTipo());
          
         return "registerUser";

@@ -28,7 +28,7 @@
 	<h1>Usuarios</h1>
     <ul>
         <c:forEach var="u" items="${usuarios}">
-        <li>${u.getId_Usuario()} ${u.getDni()} ${u.getEmail()} ${u.getContraseña()} ${u.getId_permiso().getDescripcion()}</li>
+        <li>${u.getId_Usuario()} ${u.getDni()} ${u.getEmail()} ${u.getContrasena()} ${u.getId_permiso().getDescripcion()}</li>
         </c:forEach>
     </ul>
 	</section>

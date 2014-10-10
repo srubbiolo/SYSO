@@ -17,7 +17,7 @@ public class Usuarios {
 	private int id_usuario;
 	private int dni;
 	private String email;
-	private String contraseña;
+	private String contrasena;
 	private String tipo;
 	private Permisos id_permiso;
 	
@@ -43,11 +43,11 @@ public class Usuarios {
 		this.email = email;
 	}
 	@Column (name = "contraseña")
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contraseña) {
+		this.contrasena = contraseña;
 	}
 	@Column (name = "tipo")
 	public String getTipo() {

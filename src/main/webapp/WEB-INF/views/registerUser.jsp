@@ -12,7 +12,7 @@
         <form:form action="registerUser" method="post" commandName="userForm">
             <table border="0">
                 <tr>
-                    <td colspan="2" align="center"><h2>Spring MVC Form Demo - Registration</h2></td>
+                    <td colspan="2" align="center"><h2>Registrar Usuario</h2></td>
                 </tr>
                 <tr>
                     <td>DNI:</td>
@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <td>Contraseña:</td>
-                    <td><form:input path="contraseña" /></td>
+                    <td><form:input path="contrasena" /></td>
                 </tr>
                 <tr>
                     <td>Tipo:</td>

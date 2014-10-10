@@ -30,10 +30,8 @@ public class UsuariosDAO {
 	 public Usuarios agregarUsuario(Usuarios user){
 		 
 			 Session session = sessionFactory.getCurrentSession();
-			 //session.createQuery("INSERT INTO Usuarios (dni, email, contraseña, tipo) VALUES ('"+user.getDni()+"','"+user.getEmail()+"','"+user.getContraseña()+"','"+user.getTipo()+"');");
 			 
-			 //session.createQuery("INSERT INTO Usuarios (dni, email, contraseña, tipo)" + "select stock_code, stock_name from backup_stock");
-			 String sql = "INSERT INTO Usuarios(dni, email, contraseña, tipo, id_permiso) VALUES(18845885,'ivanbailetti@hotmail.com','holamundo','adm', 1)";
+			 String sql = "INSERT INTO Usuarios(dni, email, contraseña, tipo, id_permiso) VALUES("+user.getDni()+",'"+user.getEmail()+"','"+user.getContrasena()+"','"+user.getTipo().substring(0,2)+"', 1)";
 			 Query query = (Query)session.createSQLQuery(sql);
 			 query.executeUpdate();
 			 //session.save(user);
