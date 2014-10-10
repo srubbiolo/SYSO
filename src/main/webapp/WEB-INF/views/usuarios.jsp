@@ -11,8 +11,7 @@
 	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript"
 	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
-
-<title>SYSFER-HOME</title>
+<title>LISTA-USUARIOS</title>
 </head>
 <body>
 	<section class="container">

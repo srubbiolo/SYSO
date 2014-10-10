@@ -12,7 +12,7 @@
 <script type="text/javascript"
 	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
 
-<title>SYSFER-HOME</title>
+<title>LISTA-MARCAS</title>
 </head>
 <body>
 	<section class="container">
