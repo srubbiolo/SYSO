@@ -20,6 +20,7 @@
 		<a href="/ferreteria/home.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
+		<div id="user">Hola XXXXXX</div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
@@ -31,9 +32,9 @@
 					<div>
 						<ul class="stock-list">
 							<li class="stock-row">Tipo pedido: ${p.getTipo()}
-							<br> <label>Estado: ${p.getEstado()}</label>
-							<br> <label>Usuario: ${p.getId_usuario().getDni()}</label>
-							<br> Fecha de pedido: ${p.getFecha_abierto()}</label>
+							<br> Estado: ${p.getEstado()}
+							<br> Usuario: ${p.getId_usuario().getDni()}
+							<br> Fecha de pedido: ${p.getFecha_abierto()}
 							<br> Fecha de vencimiento: ${p.getFecha_vencimiento()}
 							<br> Fecha de entrega: ${p.getFecha_entrega()}</li>
 						</ul>

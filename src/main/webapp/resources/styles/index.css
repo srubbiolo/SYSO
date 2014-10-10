@@ -7,10 +7,15 @@ body {
 	margin: 0 auto;
 }
 
-#loginLink {
+#loginLink{
 	float: right;
-	padding-top: 94px;
+	margin-top: 94px;
 	margin-right: -366px;
+}
+
+#user {
+	width: 15%;
+	margin: 0 auto;
 }
 p, h1, h2, h3, h4, h5, label, a, li, td {
 	font-family: Arial, Helvetica, sans-serif;

@@ -20,6 +20,7 @@
 			<img id="logo" alt="" url="/home"
 				src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
+		<div id="user">Hola XXXXXX</div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/marcas.html" class="productos">Listar Marcas</a></li>
 			<li><a href="/ferreteria/pedidos.html" class="productos">Listar Pedidos</a></li>
