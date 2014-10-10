@@ -1,12 +1,22 @@
-p, h1, h2, h3, h4, h5, label, a, li {
+body {
+	background-image: url('../images/red-black-background.jpg');
+}
+
+#login {
+	width: 20%;
+	margin: 0 auto;
+}
+
+#loginLink {
+	float: right;
+	padding-top: 94px;
+	margin-right: -366px;
+}
+p, h1, h2, h3, h4, h5, label, a, li, td {
 	font-family: Arial, Helvetica, sans-serif;
 }
 .container {
 	overflow: hidden;
-}
-
-#logo {
-	padding-left: 25%;
 }
 
 .header {

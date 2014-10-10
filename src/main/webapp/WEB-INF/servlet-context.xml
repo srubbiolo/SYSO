@@ -20,6 +20,8 @@
    
   <!-- Scan classpath for annotations (eg: @Service, @Repository etc) -->
   <context:component-scan base-package="com.ues21.ferreteria.index"/>
+  <context:component-scan base-package="com.ues21.ferreteria.home"/>
+  <context:component-scan base-package="com.ues21.ferreteria.login"/>
   <context:component-scan base-package="com.ues21.ferreteria.marca"/>
   <context:component-scan base-package="com.ues21.ferreteria.usuarios"/>
   <context:component-scan base-package="com.ues21.ferreteria.permisos"/>
@@ -42,6 +44,8 @@
     <property name="packagesToScan">
       <array>
         <value>com.ues21.ferreteria.index"</value>
+        <value>com.ues21.ferreteria.home"</value>
+        <value>com.ues21.ferreteria.login"</value>
         <value>com.ues21.ferreteria.marca</value>
         <value>com.ues21.ferreteria.usuarios</value>        
         <value>com.ues21.ferreteria.permisos</value>

@@ -12,33 +12,28 @@
 <script type="text/javascript"
 	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
 
-<title>LISTA-PEDIDOS</title>
+<title>LOGIN</title>
 </head>
 <body>
 	<section class="container">
 	<div class="header">
-		<a href="/ferreteria/home.html">
+		<a href="/ferreteria/index.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
 		<ul class="buttons">
-			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
+			<li><a href="/ferreteria/index.html" class="home">Volver</a></li>
 		</ul>
 	</div>
-			</div>
-			<h1>Pedidos</h1>
-			<div class="result-container" id="resContainer">
-				<c:forEach var="p" items="${pedidos}">
-					<div>
-						<ul class="stock-list">
-							<li class="stock-row">Tipo pedido: ${p.getTipo()}
-							<br> <label>Estado: ${p.getEstado()}</label>
-							<br> <label>Usuario: ${p.getId_usuario().getDni()}</label>
-							<br> Fecha de pedido: ${p.getFecha_abierto()}</label>
-							<br> Fecha de vencimiento: ${p.getFecha_vencimiento()}
-							<br> Fecha de entrega: ${p.getFecha_entrega()}</li>
-						</ul>
-						</c:forEach>
-			</div>	
+	<div id="login">
+      <h1>Inicio de sesión</h1>
+      <form method="post" action="index.html">
+        <p><input type="text" name="login" value="" placeholder="Nombre de usuario o mail"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+        </p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
+    </div>
 	</section>
 
 

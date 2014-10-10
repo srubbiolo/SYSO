@@ -16,16 +16,20 @@
 <body>
 	<section class="container">
 	<div class="header">
-		<a href="/ferreteria/index.html">
-			<img id="logo" alt="" url="/index"
+		<a href="/ferreteria/home.html">
+			<img id="logo" alt="" url="/home"
 				src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
 		<ul class="buttons">
-			<li><a href="/ferreteria/index.html" class="home">Home</a></li>
-			<li><a href="/ferreteria/resultProductos.html" class="productos">Productos</a></li>
+			<li><a href="/ferreteria/marcas.html" class="productos">Listar Marcas</a></li>
+			<li><a href="/ferreteria/pedidos.html" class="productos">Listar Pedidos</a></li>
+			<li><a href="/ferreteria/productos.html" class="productos">Listar Productos</a></li>
+			<li><a href="/ferreteria/usuarios.html" class="productos">Listar Usuarios</a></li>
+			<li><a href="/ferreteria/registerUser.html" class="productos">Registrar Usuario</a></li>
+			<li><a href="/ferreteria/registerBrand.html" class="productos">Registrar Marca</a></li>
+			<li><a href="/ferreteria/registerProduct.html" class="productos">Registrar Producto</a></li>
+			<li><a href="/ferreteria/index.html" class="productos">Salir</a></li>
 		</ul>
-		
-		<a id="loginLink" href="/ferreteria/login.html"> Iniciar Sesión </a>
 	</div>
 	<div class="homeInfo" >
 		<p>Esta es cierta información sobre la home page</p>

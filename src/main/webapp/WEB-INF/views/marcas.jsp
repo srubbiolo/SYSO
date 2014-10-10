@@ -17,13 +17,11 @@
 <body>
 	<section class="container">
 	<div class="header">
-		<a href="/ferreteria/index.html">
-			<img id="logo" alt="" url="/index"
-				src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
+		<a href="/ferreteria/home.html">
+			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
 		<ul class="buttons">
-			<li><a href="/ferreteria/index.html" class="home">Home</a></li>
-			<li><a href="/ferreteria/resultProductos.html" class="productos">Productos</a></li>
+			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
 	
