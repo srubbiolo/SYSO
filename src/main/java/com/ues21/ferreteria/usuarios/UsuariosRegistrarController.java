@@ -21,9 +21,9 @@ public class UsuariosRegistrarController {
         model.put("userForm", userForm);
          
         ArrayList<String> tipoUserList = new ArrayList<String>();
-        tipoUserList.add("Administrador");
-        tipoUserList.add("Usuario");
-        tipoUserList.add("Empleado");
+        tipoUserList.add("ADMINISTRADOR");
+        tipoUserList.add("EMPLEADO");
+        tipoUserList.add("CLIENTE");
         model.put("tipoUserList", tipoUserList);
          
         return "registerUser";
