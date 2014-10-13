@@ -17,8 +17,8 @@ public class MarcaController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	  public String listaMarcas(Model model) {
-		String nombre = "Stanley";
-	    List<Marcas> marcas = marcaDAO.listaMarcas(nombre);
+		//String nombre = "Stanley";
+	    List<Marcas> marcas = marcaDAO.listaMarcas();
 	    model.addAttribute("marcas", marcas);
 	    return "marcas";
 	  }
