@@ -12,6 +12,7 @@
 	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
 
 <title>SYSFER-HOME</title>
+
 </head>
 <body>
 	<section class="container">
