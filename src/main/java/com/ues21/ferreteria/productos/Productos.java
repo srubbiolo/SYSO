@@ -17,6 +17,7 @@ public class Productos {
 	private int id_producto;
 	private String nombre;
 	private String descripcion;
+	//private String idmarca;
 	private Marcas id_marca;
 	private double precio;
 	private int stock;
@@ -44,6 +45,7 @@ public class Productos {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
 	
 	@ManyToOne//(cascade = {CascadeType.ALL})
 	@JoinColumn(name="id_marca")
