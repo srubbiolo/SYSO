@@ -15,6 +15,9 @@
 
 </head>
 <body>
+
+	<div class="backgroundImage" > <!--This is the background image--> </div>
+
 	<section class="container">
 	<div class="header">
 		<a href="/ferreteria/index.html">

@@ -1,5 +1,18 @@
-body {
+/*
+	BACKGROUND IMAGE OPTIONS
+*/
+.backgroundImage {
 	background-image: url('../images/red-black-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+	position:fixed;
+    padding:0;
+    margin:0;
+    height: 100%;
+    width:100%;
+    opacity: 0.7;  
+    z-index: -1;
 }
 
 #login {
@@ -51,7 +64,10 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
 	float: left;
 	padding-top: 30px;
 }
-/*START BUTTONS */
+
+/*
+	START BUTTONS 
+*/
 .buttons li {
     float: left;
     list-style: none;
@@ -72,11 +88,14 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
     color: #FFFFFF;
     background-color: #FF0000;
 }
-/*END BUTTONS */
+/*
+	END BUTTONS 
+*/
 
-/*START LISTS */
+/*
+	START LISTS 
+*/
 .productsDisplay ul {
 	list-style-type: circle;
 	padding-left: 30px;
 }
-/*END BUTTONS */
