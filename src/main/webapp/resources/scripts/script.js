@@ -1,28 +1,14 @@
-/**
-function clearForm() {
-	//var form = document.getElementById("registerUserForm");
-	//form.reset();
-	$("#box1").val('');
-	$("#box2").val('');
-	$("#box3").val('');
-}
-*/
+$(document).ready(function() {
+	$(window).resize(function(){location.reload();});
 
-/**
-$( document ).ready(function() {
-	$("#registerUserForm")[0].reset();
-	$('#registerUserForm').children('input').val('')
-	alert("surgundruleeeeeeeeeee!");
-});
-*/
+  $("#brands").owlCarousel({
 
-$(function(){
-	   
-    $('#submitFormbutton').click(function(){
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-    	window.location.href = "http://localhost:8080/ferreteria/registerUser";
-            alert('redirigio');
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
 
-    }); 
-    
+  });
+
 });
