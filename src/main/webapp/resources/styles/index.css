@@ -43,12 +43,13 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
 
 .header {
 	border-bottom: solid black;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 	overflow: hidden;
 }
 
 .buttons {
 	float: right;
+	width: 60%;
 }
 
 .login {
@@ -56,7 +57,9 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
 }
 
 #logo {
-		float: left;
+	float: left;
+	width: 34%;
+	padding: 2% 0;
 }
 .login {
 	width: 30 %;
@@ -77,14 +80,15 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
     list-style: none;
     text-align: center;
     background-color: #333333;
-    margin-right: 30px;
-    width: 150px;
-    line-height: 60px;
+    margin: 0 15px 15px 0;
+    width: 14%;
+    line-height: 50px;
 }
 .buttons li a{
     text-decoration: none;
     color: #FFFFFF;
     display: block;
+    font-size: 0.9vw;
 }
  
 .buttons li a:hover {
