@@ -46,15 +46,15 @@
                 </tr>
                  <tr>
                     <td>ID Marca:</td>
-                    <td><form:select id="box3" path="id_marca" items="${tipoUserList}" /></td>
-                </tr>
-                <tr>
-                    <td>Precio:</td>
-                    <td><form:input id="box4" path="precio" /></td>
+                    <td><form:select id="box3" path="marca" items="${tipoUserList}" /></td>
                 </tr>
                 <tr>
                     <td>Stock:</td>
                     <td><form:input id="box5" path="stock" /></td>
+                </tr>
+                <tr>
+                    <td>Precio:</td>
+                    <td><form:input id="box4" path="precio" /></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Register" /></td>

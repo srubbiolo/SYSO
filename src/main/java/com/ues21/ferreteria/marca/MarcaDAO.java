@@ -43,6 +43,18 @@ public class MarcaDAO {
 		 }
 	 
 	 @Transactional
+		public Marcas getMarcaId(String nombre){
+			 Session session = sessionFactory.getCurrentSession();
+			 Marcas marca;
+			 if (nombre == null || nombre == "" )
+				 marca = null;
+			 else
+				 marca = (Marcas)session.createQuery("from Marcas where nombre='"+nombre+"'");
+			 
+			 return marca;
+		 }
+	 
+	 @Transactional
 	 public Marcas agregarMarca(Marcas marca){
 		 
 			Session session = sessionFactory.getCurrentSession();

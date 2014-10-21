@@ -1,5 +1,6 @@
 package com.ues21.ferreteria.productos;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -39,17 +40,20 @@ public class ProductosDAO {
 		 
 			Session session = sessionFactory.getCurrentSession();
 			 /*
-			 List permisos = session.createQuery("from Permisos").list();
-			 int id_permiso = 3;
-			 for(Iterator<Permisos> i = permisos.iterator(); i.hasNext(); ) {
-				    Permisos permiso = i.next();
-				    if (permiso.getTipo() == user.getTipo().substring(0,3))
+			 List marcas = session.createQuery("from Marcas").list();
+			 int id_marca = 3;
+			 for(Iterator<Marcas> i = marcas.iterator(); i.hasNext(); ) {
+				    Marcas marca = i.next();
+				    if (producto.getMarca().getId_marca() == marca.getId_marca())
 				    {
-				    	id_permiso = permiso.getIdPermiso();
+				    	id_marca = producto.getMarca().getId_marca();
 				    }
 				}
-			*/
-			 String sql = "INSERT INTO Productos(nombre, descripcion, id_marca, precio, stock) VALUES('"+producto.getNombre()+"','"+producto.getDescripcion()+"',"+producto.getMarca()+","+producto.getPrecio()+","+producto.getStock()+")";
+			 */
+			 Marcas marca = producto.getMarca();
+			 int id_marca = marca.getId_marca();
+			
+			 String sql = "INSERT INTO Productos(nombre, descripcion, id_marca, precio, stock) VALUES('"+producto.getNombre()+"','"+producto.getDescripcion()+"',"+id_marca+","+producto.getPrecio()+","+producto.getStock()+")";
 			 
 			 Query query = (Query)session.createSQLQuery(sql);
 			 query.executeUpdate();
