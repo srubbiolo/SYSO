@@ -1,15 +1,16 @@
 $(document).ready(function() {
-	$(window).resize(function(){location.reload();});
+	$(window).resize(function(){location.reload();
+	});
 
-  $("#brands").owlCarousel({
+$("#brands").owlCarousel({
 
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-      items : 4,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3]
+    items : 4,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,3]
 
-  });
+});
   alert("corre el js");
   $("#registerUserForm").submit(function(){
 	    var isFormValid = true;

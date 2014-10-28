@@ -59,8 +59,7 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
 #logo {
 	float: left;
 	width: 34%;
-	position: absolute;
-	bottom: 58%;
+	padding: 2% 0;
 }
 .login {
 	width: 30 %;
