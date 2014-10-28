@@ -60,7 +60,7 @@ p, h1, h2, h3, h4, h5, label, a, li, td {
 	float: left;
 	width: 34%;
 	position: absolute;
-	top: 9%;
+	bottom: 58%;
 }
 .login {
 	width: 30 %;
