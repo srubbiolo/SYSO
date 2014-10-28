@@ -37,19 +37,19 @@
                 </tr>
                 <tr>
                     <td>DNI:</td>
-                    <td><form:input id="box1" path="dni" /></td>
+                    <td><form:input class="required" id="box1" path="dni" /></td>
                 </tr>
                 <tr>
                     <td>E-mail:</td>
-                    <td><form:input id="box2" path="email" /></td>
+                    <td><form:input class="required" id="box2" path="email" /></td>
                 </tr>
                 <tr>
                     <td>Contraseña:</td>
-                    <td><form:password path="contrasena" /></td>
+                    <td><form:password class="required" path="contrasena" /></td>
                 </tr>
                 <tr>
                     <td>Tipo:</td>
-                    <td><form:select id="box3" path="tipo" items="${tipoUserList}" /></td>
+                    <td><form:select id="box3" class="required" path="tipo" items="${tipoUserList}" /></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>

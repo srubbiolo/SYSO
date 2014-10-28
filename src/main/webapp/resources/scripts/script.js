@@ -10,5 +10,24 @@ $(document).ready(function() {
       itemsDesktopSmall : [979,3]
 
   });
+  alert("corre el js");
+  $("#registerUserForm").submit(function(){
+	    var isFormValid = true;
+	    alert("Please fill in all the required fields (indicated by *)");
+
+	    $(".required input").each(function(){
+	        if ($.trim($(this).val()).length == 0){
+	            $(this).addClass("highlight");
+	            isFormValid = false;
+	        }
+	        else{
+	            $(this).removeClass("highlight");
+	        }
+	    });
+
+	    if (!isFormValid) alert("Please fill in all the required fields (indicated by *)");
+
+	    return isFormValid;
+	});
 
 });
