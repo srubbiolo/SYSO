@@ -49,7 +49,7 @@
                     <td><form:input id="box2" path="email" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Register" /></td>
+                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>
                 </tr>
             </table>
         </form:form>

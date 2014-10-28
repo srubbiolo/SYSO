@@ -52,7 +52,7 @@
                     <td><form:select id="box3" path="tipo" items="${tipoUserList}" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Register" /></td>
+                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>
                 </tr>
             </table>
         </form:form>
