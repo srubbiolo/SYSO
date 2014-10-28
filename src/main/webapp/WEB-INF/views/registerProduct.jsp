@@ -14,7 +14,7 @@
 <script type="text/javascript"
 	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
 
-<title>LISTA-PRODUCTOS</title>
+<title>REGISTRAR-PRODUCTOS</title>
 </head>
 <body>
 
@@ -31,36 +31,40 @@
 		</ul>
 	</div>
 	    <div align="center">
-        <form:form id="registerProductForm" action="registerProduct" method="post" commandName="userForm">
-            <table border="0">
-                <tr>
-                    <td colspan="2" align="center"><h2>Registrar Producto</h2></td>
-                </tr>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><form:input id="box1" path="nombre" /></td>
-                </tr>
-                <tr>
-                    <td>Descripcion:</td>
-                    <td><form:input id="box2" path="descripcion" /></td>
-                </tr>
-                 <tr>
-                    <td>ID Marca:</td>
-                    <td><form:select id="box3" path="marca" items="${tipoUserList}" /></td>
-                </tr>
-                <tr>
-                    <td>Stock:</td>
-                    <td><form:input id="box5" path="stock" /></td>
-                </tr>
-                <tr>
-                    <td>Precio:</td>
-                    <td><form:input id="box4" path="precio" /></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>
-                </tr>
-            </table>
-        </form:form>
+       <form:form action="addProducto" method="post"
+			commandName="formProducto">
+
+			<div class="add-producto--form-container">
+
+				<div class="add-producto--form-content">
+					<label for="nombre" class="add-producto--form-label">Nombre:</label>
+					<form:input path="nombre" class="add-producto--form-input" />
+				</div>
+				<div class="add-producto--form-content">
+					<label for="descripcion" class="add-producto--form-label">Descripcion:</label>
+					<form:input path="descripcion" class="add-producto--form-input" />
+				</div>
+				<div class="add-producto--form-content">
+					<label for="marca" class="add-producto--form-label">Marca:</label>
+					<form:select path="marca" class="add-producto--form-input">
+						<form:options items="${marcas}" itemValue="id_marca"
+							itemLabel="nombre" />
+					</form:select>
+				</div>
+				<div class="add-producto--form-content">
+					<label for="stock" class="add-producto--form-label">Stock:</label>
+					<form:input path="stock" class="add-producto--form-input" />
+				</div>
+				<div class="add-producto--form-content">
+					<label for="precio" class="add-producto--form-label">Precio:</label>
+					<form:input path="precio" class="add-producto--form-input" />
+				</div>
+				<div>
+					<input class="add-producto--form-button" type="reset" value="Cancelar">
+					<input class="add-producto--form-button" type="submit" value="Añadir" />
+				</div>
+			</div>
+		</form:form>
     </div>
 	</section>
 
