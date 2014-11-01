@@ -9,10 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link type="text/css" rel="stylesheet"
 	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+<script	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
 
 <title>REGISTRAR-PRODUCTOS</title>
 </head>
@@ -25,46 +23,47 @@
 		<a href="/ferreteria/home.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
-		<div id="user">Hola XXXXXX</div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
 	    <div align="center">
-       <form:form action="addProducto" method="post"
-			commandName="formProducto">
-
-			<div class="add-producto--form-container">
-
-				<div class="add-producto--form-content">
-					<label for="nombre" class="add-producto--form-label">Nombre:</label>
-					<form:input path="nombre" class="add-producto--form-input" />
-				</div>
-				<div class="add-producto--form-content">
-					<label for="descripcion" class="add-producto--form-label">Descripcion:</label>
-					<form:input path="descripcion" class="add-producto--form-input" />
-				</div>
-				<div class="add-producto--form-content">
-					<label for="marca" class="add-producto--form-label">Marca:</label>
-					<form:select path="marca" class="add-producto--form-input">
-						<form:options items="${marcas}" itemValue="id_marca"
-							itemLabel="nombre" />
-					</form:select>
-				</div>
-				<div class="add-producto--form-content">
-					<label for="stock" class="add-producto--form-label">Stock:</label>
-					<form:input path="stock" class="add-producto--form-input" />
-				</div>
-				<div class="add-producto--form-content">
-					<label for="precio" class="add-producto--form-label">Precio:</label>
-					<form:input path="precio" class="add-producto--form-input" />
-				</div>
-				<div>
-					<input class="add-producto--form-button" type="reset" value="Cancelar">
-					<input class="add-producto--form-button" type="submit" value="Añadir" />
-				</div>
-			</div>
-		</form:form>
+       <form:form id="registerProductForm" action="registerProduct" method="post" commandName="userForm">
+            <table border="0">
+                <tr>
+                    <td colspan="2" align="center"><h2>Registrar Producto</h2></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><form:input class="required" id="box1" path="nombre" /></td>
+                </tr>
+                <tr>
+                    <td>Descripción:</td>
+                    <td><form:input class="required" id="box2" path="descripcion" /></td>
+                </tr>
+				<tr>
+                    <td>Marca:</td>
+					<td><form:select path="marca" class="add-producto--form-input">
+						<form:options items="${marcas}" itemValue="id_marca" itemLabel="nombre" />
+					</form:select></td>
+				<tr>
+                <!--  <tr>
+                    <td>Marca:</td>
+                    <td><form:select id="box3" class="required" path="marca" items="${marcas}" itemValue="id_marca"/></td>
+                </tr>-->
+                <tr>
+                    <td>Stock:</td>
+                    <td><form:input class="required" path="stock" /></td>
+                </tr>
+                <tr>
+                    <td>Precio:</td>
+                    <td><form:input class="required" path="precio" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>
+                </tr>
+            </table>
+        </form:form>
     </div>
 	</section>
 

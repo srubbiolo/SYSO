@@ -3,7 +3,6 @@ package com.ues21.ferreteria.productos;
 import java.util.Iterator;
 import java.util.List;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,29 +35,19 @@ public class ProductosDAO {
 	 }
 	
 	 @Transactional
-	 public Productos agregarProducto(Productos producto){
-		 
-			Session session = sessionFactory.getCurrentSession();
-			 /*
-			 List marcas = session.createQuery("from Marcas").list();
-			 int id_marca = 3;
-			 for(Iterator<Marcas> i = marcas.iterator(); i.hasNext(); ) {
-				    Marcas marca = i.next();
-				    if (producto.getMarca().getId_marca() == marca.getId_marca())
-				    {
-				    	id_marca = producto.getMarca().getId_marca();
-				    }
-				}
-			 */
-			 Marcas marca = producto.getMarca();
-			 int id_marca = marca.getId_marca();
+	 public String agregarProducto(Productos producto){
+		 			
+		 String ret="";
 			
-			 String sql = "INSERT INTO Productos(nombre, descripcion, id_marca, precio, stock) VALUES('"+producto.getNombre()+"','"+producto.getDescripcion()+"',"+id_marca+","+producto.getPrecio()+","+producto.getStock()+")";
-			 
-			 Query query = (Query)session.createSQLQuery(sql);
-			 query.executeUpdate();
-			 //session.save(user);
-			 return producto;
+			try {
+				Session session = sessionFactory.getCurrentSession();
+				session.save(producto);
+				ret="success";
+			} catch (Exception e) {
+				ret="failed";
+			} 
+			
+			return ret;
 	 } 
 }
 

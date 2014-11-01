@@ -15,6 +15,27 @@ public class Marcas {
 	private String tel_contacto;
 	private String email_contacto;
 	
+	public Marcas(){
+		this.id_marca = 0;
+		this.nombre = "";
+		this.tel_contacto = "";
+		this.email_contacto = "";		
+	}
+	
+	public Marcas(String nombre){
+		this.id_marca = 0;
+		this.nombre = nombre;
+		this.tel_contacto = "";
+		this.email_contacto = "";
+	}
+	
+	public Marcas(int id_marca, String nombre, String tel_contacto, String email_contacto){
+		this.id_marca = id_marca;
+		this.nombre = nombre;
+		this.tel_contacto = tel_contacto;
+		this.email_contacto = email_contacto;		
+	}
+	
 	@Column (name = "id_marca")
 	public int getId_marca() {
 		return id_marca;

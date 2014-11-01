@@ -24,9 +24,9 @@
 		<a href="/ferreteria/home.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
-		<div id="user">Hola XXXXXX</div>
+		<!--  <div id="user">Hola XXXXXX</div>-->
 		<ul class="buttons">
-			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
+			<li><a href="/ferreteria/index.html" class="index">Volver</a></li>
 		</ul>
 	</div>
 	
@@ -34,7 +34,7 @@
         <form:form id="registerUserForm" action="login" method="post" commandName="userForm">
             <table border="0">
                 <tr>
-                    <td colspan="2" align="center"><h2>Registrar Usuario</h2></td>
+                    <td colspan="2" align="center"><h2>Log In</h2></td>
                 </tr>
                 <tr>
                     <td>DNI:</td>
@@ -45,7 +45,7 @@
                     <td><form:password path="contrasena" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Register" /></td>
+                    <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Iniciar Sesión" /></td>
                 </tr>
             </table>
         </form:form>

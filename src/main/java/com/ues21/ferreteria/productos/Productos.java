@@ -17,7 +17,6 @@ public class Productos {
 	private int id_producto;
 	private String nombre;
 	private String descripcion;
-	//private String idmarca;
 	private Marcas id_marca;
 	private double precio;
 	private int stock;
@@ -52,8 +51,12 @@ public class Productos {
 	public Marcas getMarca() {
 		return id_marca;
 	}
-	public void setMarca(Marcas id_marca) {
-		this.id_marca = id_marca;
+	public void setMarca(Marcas marca) {
+		this.id_marca = marca;
+	}
+	
+	public void setMarca(String nombre){
+		this.id_marca = new Marcas(nombre);
 	}
 	
 	@Column(name = "precio")

@@ -41,6 +41,13 @@ public class MarcaDAO {
 			 
 			 return marcas;
 		 }
+	 @Transactional
+	 public Marcas getMarcaId(Integer id){
+		 Session session = sessionFactory.getCurrentSession();
+		 Marcas marca = (Marcas) session.get(Marcas.class, id);
+		 
+		 return marca;
+	 }
 	 
 	 @Transactional
 		public Marcas getMarcaId(String nombre){
@@ -73,7 +80,6 @@ public class MarcaDAO {
 			 
 			 Query query = (Query)session.createSQLQuery(sql);
 			 query.executeUpdate();
-			 //session.save(user);
 			 return marca;
 	 } 
 }
