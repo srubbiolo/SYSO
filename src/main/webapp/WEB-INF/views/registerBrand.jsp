@@ -7,12 +7,16 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet"
-	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+
+<!--Style Sheets-->
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/alertify.default.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/alertify.core.css' />
+	
+<!--Scripts-->
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
+<script type="text/javascript" src='${pageContext.request.contextPath}/reso	urces/scripts/forms.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/reso	urces/scripts/alertify.min.js'></script>
 
 <title>LISTA-PRODUCTOS</title>
 </head>
@@ -38,15 +42,15 @@
                 </tr>
                 <tr>
                     <td>Nombre:</td>
-                    <td><form:input id="box1" path="nombre" /></td>
+                    <td><form:input id="box1" class="required" path="nombre" /></td>
                 </tr>
                 <tr>
                     <td>Tel. Contacto:</td>
-                    <td><form:input id="box3" path="telefono" /></td>
+                    <td><form:input id="box3" class="required" path="telefono" /></td>
                 </tr>
                 <tr>
                     <td>E-mail:</td>
-                    <td><form:input id="box2" path="email" /></td>
+                    <td><form:input id="box2" class="required" path="email" /></td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input id="submitFormbutton"type="submit" value="Registrar" /></td>
