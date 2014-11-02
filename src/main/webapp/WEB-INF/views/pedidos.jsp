@@ -36,6 +36,7 @@
 		<!-- START Table Header -->
 		<thead>
 			<tr>
+				<th>Id de pedido</th>
 				<th>Tipo de pedido</th>
 				<th>Estado de pedido</th>
 				<th>Usuario</th>
@@ -50,6 +51,7 @@
 		<tbody>
 		<c:forEach var="p" items="${pedidos}">
 			<tr>
+				<td>${p.getId_pedido()}</td>
 				<td>${p.getTipo()}</td>
 				<td>${p.getEstado()}</td>
 				<td>${p.getId_usuario().getDni()}</td>
