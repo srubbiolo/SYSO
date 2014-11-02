@@ -5,16 +5,18 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet"
-	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+
+<!--Style Sheets-->
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/tablas.css' />
+
+<!--Scripts-->
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
+
 <title>LISTA-USUARIOS</title>
 </head>
-<body>
 
+<body>
 	<div class="backgroundImage" > <!--This is the background image--> </div>
 	
 	<section class="container">
@@ -27,14 +29,35 @@
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
-	<h1>Usuarios</h1>
-    <ul>
-        <c:forEach var="u" items="${usuarios}">
-        <li>${u.getId_Usuario()} ${u.getDni()} ${u.getEmail()} ${u.getContrasena()} ${u.getId_permiso().getDescripcion()}</li>
-        </c:forEach>
-    </ul>
+	<div class="mainContent" >
+		<h1>Usuarios</h1>
+	    <table cellspacing='0'>
+	
+		<!-- START Table Header -->
+		<thead>
+			<tr>
+				<th>Id de usuario</th>
+				<th>Dni</th>
+				<th>e-Mail</th>
+				<th>Tipo de usuario</th>
+			</tr>
+		</thead>
+		<!-- END Table Header -->
+	
+		<!-- START Table Body -->
+		<tbody>
+		<c:forEach var="u" items="${usuarios}">
+			<tr>
+				<td>${u.getId_Usuario()}</td>
+				<td>${u.getDni()}</td>
+				<td>${u.getEmail()}</td>
+				<td>${u.getId_permiso().getDescripcion()}</td>
+			</tr>
+			 </c:forEach>
+		</tbody>
+		<!-- END Table Body -->
+		</table>
+	</div>
 	</section>
-
-
 </body>
 </html>

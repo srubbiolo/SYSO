@@ -5,12 +5,13 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet"
-	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+
+<!--Style Sheets-->
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/tablas.css' />
+
+<!--Scripts-->
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
 
 <title>LISTA-PRODUCTOS</title>
 </head>
@@ -28,14 +29,40 @@
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
-	<h1>Productos</h1>
-    <ul>
-        <c:forEach var="p" items="${productos}">
-        <li>${p.getId_producto()} ${p.getNombre()} ${p.getDescripcion()} ${p.getMarca().getNombre()} ${p.getPrecio()} ${p.getStock()}</li>
-        </c:forEach>
-    </ul>
+    <div class="mainContent" >
+		<h1>Productos</h1>
+	    <table cellspacing='0'>
+	
+		<!-- START Table Header -->
+		<thead>
+			<tr>
+				<th>Id de producto</th>
+				<th>Nombre de producto</th>
+				<th>Descripción</th>
+				<th>Marca</th>
+				<th>Precio</th>
+				<th>Cantiad en stock</th>
+			</tr>
+		</thead>
+		<!-- END Table Header -->
+	
+		<!-- START Table Body -->
+		<tbody>
+		<c:forEach var="p" items="${productos}">
+			<tr>
+				<td>${p.getId_producto()}</td>
+				<td>${p.getNombre()}</td>
+				<td>${p.getDescripcion()}</td>
+				<td>${p.getMarca().getNombre()}</td>
+				<td>${p.getPrecio()}</td>
+				<td>${p.getStock()}</td>
+			</tr>
+			 </c:forEach>
+		</tbody>
+		<!-- END Table Body -->
+	
+		</table>
+	</div>
 	</section>
-
-
 </body>
 </html>

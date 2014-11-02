@@ -5,12 +5,13 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet"
-	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+
+<!--Style Sheets-->
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/tablas.css' />
+
+<!--Scripts-->
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
 
 <title>LISTA-PEDIDOS</title>
 </head>
@@ -28,23 +29,41 @@
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
-			</div>
-			<h1>Pedidos</h1>
-			<div class="result-container" id="resContainer">
-				<c:forEach var="p" items="${pedidos}">
-					<div>
-						<ul class="stock-list">
-							<li class="stock-row">Tipo pedido: ${p.getTipo()}
-							<br> Estado: ${p.getEstado()}
-							<br> Usuario: ${p.getId_usuario().getDni()}
-							<br> Fecha de pedido: ${p.getFecha_abierto()}
-							<br> Fecha de vencimiento: ${p.getFecha_vencimiento()}
-							<br> Fecha de entrega: ${p.getFecha_entrega()}</li>
-						</ul>
-						</c:forEach>
-			</div>	
+	<div class="mainContent" >
+		<h1>Pedidos</h1>
+	    <table cellspacing='0'>
+	
+		<!-- START Table Header -->
+		<thead>
+			<tr>
+				<th>Tipo de pedido</th>
+				<th>Estado de pedido</th>
+				<th>Usuario</th>
+				<th>Fecha de pedido</th>
+				<th>Fecha de vencimiento</th>
+				<th>Fecha de entrega</th>
+			</tr>
+		</thead>
+		<!-- END Table Header -->
+	
+		<!-- START Table Body -->
+		<tbody>
+		<c:forEach var="p" items="${pedidos}">
+			<tr>
+				<td>${p.getTipo()}</td>
+				<td>${p.getEstado()}</td>
+				<td>${p.getId_usuario().getDni()}</td>
+				<td>${p.getFecha_abierto()}</td>
+				<td>${p.getFecha_vencimiento()}</td>
+				<td>${p.getFecha_entrega()}</td>
+			</tr>
+			 </c:forEach>
+		</tbody>
+		<!-- END Table Body -->
+	
+		</table>
+	</div>
 	</section>
-
 
 </body>
 </html>

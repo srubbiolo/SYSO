@@ -5,12 +5,13 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet"
-	href='${pageContext.request.contextPath}/resources/styles/index.css' />
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript"
-	src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+
+<!--Style Sheets-->
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/tablas.css' />
+
+<!--Scripts-->
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
 
 <title>LISTA-MARCAS</title>
 </head>
@@ -28,15 +29,36 @@
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
 	</div>
+	<div class="mainContent" >
+		<h1>Marcas</h1>
+	    <table cellspacing='0'>
 	
-	<h1>Marcas</h1>
-    <ul>		  
-        <c:forEach var="m" items="${marcas}">
-            <li>${m.getId_marca()} ${m.getNombre()} ${m.getTelefono()} ${m.getEmail()}</li>
-        </c:forEach>        
-    </ul>
+		<!-- START Table Header -->
+		<thead>
+			<tr>
+				<th>Id de marca</th>
+				<th>Nombre de marca</th>
+				<th>Teléfono</th>
+				<th>e-Mail</th>
+			</tr>
+		</thead>
+		<!-- END Table Header -->
+	
+		<!-- START Table Body -->
+		<tbody>
+		<c:forEach var="m" items="${marcas}">
+			<tr>
+				<td>${m.getId_marca()}</td>
+				<td>${m.getNombre()}</td>
+				<td>${m.getTelefono()}</td>
+				<td>${m.getEmail()}</td>
+			</tr>
+			 </c:forEach>
+		</tbody>
+		<!-- END Table Body -->
+	
+		</table>
+	</div>
 	</section>
-
-
 </body>
 </html>
