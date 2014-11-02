@@ -37,6 +37,7 @@
 			<label> Ingrese productos que filtrar: </label> <input type="text"
 				class="submitButton" name="nombre" /> <input type="submit" value="Buscar" />
 		</form>
+		<label>Resultado de la busqueda para : ${nombre}</label>
 	    <table cellspacing='0'>
 			<div class="productsDisplay">
 			<!-- START Table Header -->
@@ -64,9 +65,16 @@
 					<td>${p.getMarca().getNombre()}</td>
 					<td>${p.getPrecio()}</td>
 					<td>${p.getStock()}</td>
-					<form action="compraProducto" method="post">
-					<td> <input type="text" class="submitButton" name="nombre" /> </td>
-					<td> <input type="submit" value="Comprar este producto" /> </td>			
+					
+					<form action="resultProductos" method="post">
+						<input type="hidden" name="id_producto" value="${p.getId_producto()}"/>
+						<!--  <input type="hidden" name="nombre" value="${p.getNombre()}"/>
+						<input type="hidden" name="desc" value="${p.getDescripcion()}"/>
+						<input type="hidden" name="marca" value="${p.getMarca().getNombre()}"/>
+						<input type="hidden" name="precio" value="${p.getPrecio()}"/>
+						<input type="hidden" name="stock" value="${p.getStock()}"/>-->
+						<td> <input type="text" class="submitButton" name="cantidad" /> </td>
+						<td> <input type="submit" value="Comprar este producto" /> </td>			
 					</form>
 				</tr>
 				 </c:forEach>

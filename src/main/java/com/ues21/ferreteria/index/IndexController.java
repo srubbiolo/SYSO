@@ -28,6 +28,8 @@ public class IndexController  {
 	
 	@RequestMapping(value ="/resultProductos", method = RequestMethod.POST)
     public String resultProductos(@ModelAttribute("nombre")String nombre,
+    		@ModelAttribute("id_producto")String id_producto,
+    		@ModelAttribute("cantidad")String cantidad,
                      BindingResult result,
                      Model model){		
 
@@ -37,7 +39,9 @@ public class IndexController  {
         if(result.hasErrors()){
             return"home";
         }else{
-           model.addAttribute("userId",nombre);
+           model.addAttribute("nombre",nombre);
+           System.out.println("id_producto: " + id_producto);
+           System.out.println("cantidad: " + cantidad);
            return"resultProductos";
         }
     }
