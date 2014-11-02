@@ -48,8 +48,8 @@
 					<th>Marca</th>
 					<th>Precio</th>
 					<th>Cantidad disponible</th>
-					<th>CANTIDAD</th>
-					<th>COMPRAR</th>
+					<th>Cantidad</th>
+					<th>Comprar</th>
 				</tr>
 			</thead>
 			<!-- END Table Header -->
