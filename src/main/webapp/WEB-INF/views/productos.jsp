@@ -42,6 +42,8 @@
 				<th>Marca</th>
 				<th>Precio</th>
 				<th>Cantiad en stock</th>
+				<th>Comprar</th>
+				
 			</tr>
 		</thead>
 		<!-- END Table Header -->
@@ -56,6 +58,8 @@
 				<td>${p.getMarca().getNombre()}</td>
 				<td>${p.getPrecio()}</td>
 				<td>${p.getStock()}</td>
+				<td>
+			</td>
 			</tr>
 			 </c:forEach>
 		</tbody>

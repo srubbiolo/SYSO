@@ -48,6 +48,8 @@
 					<th>Marca</th>
 					<th>Precio</th>
 					<th>Cantidad disponible</th>
+					<th>CANTIDAD</th>
+					<th>COMPRAR</th>
 				</tr>
 			</thead>
 			<!-- END Table Header -->
@@ -62,6 +64,10 @@
 					<td>${p.getMarca().getNombre()}</td>
 					<td>${p.getPrecio()}</td>
 					<td>${p.getStock()}</td>
+					<form action="compraProducto" method="post">
+					<td> <input type="text" class="submitButton" name="nombre" /> </td>
+					<td> <input type="submit" value="Comprar este producto" /> </td>			
+					</form>
 				</tr>
 				 </c:forEach>
 			</tbody>
