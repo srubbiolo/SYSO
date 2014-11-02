@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	  alert("corre el js");
 
 	  $(':input')
 	 .not(':button, :submit, :reset, :hidden')
@@ -18,7 +17,8 @@ $(document).ready(function() {
 		  
 		  if (!isFormValid) {
 		    	alertify.alert("Por favor ingrese los datos correctamente");
-		    	$('.required').css({'background-color' : '#FFFF16'});
+		    	$('.required').css({'background-color' : '#FFFF16'})
+  							  .val('');
 		    		  event.preventDefault();
 		    }
 		  else {
@@ -49,6 +49,6 @@ $(document).ready(function() {
 	  });
 	  
 	  $('.required').click(function(){
-		  $('.required').css({'background-color' : '#FFF'});
+		  $('.required').css({'background-color' : '#FFF'})
 	  });
 });
