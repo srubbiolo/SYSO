@@ -74,13 +74,16 @@ public class PedidosDAO {
 			
 		 String ret="";
 			
+		 	Session session = sessionFactory.getCurrentSession();
+			session.save(detalle);
+		 /*
 			try {
 				Session session = sessionFactory.getCurrentSession();
 				session.save(detalle);
 				ret="success";
 			} catch (Exception e) {
 				ret="failed";
-			} 
+			} */
 			
 			return ret;
 			

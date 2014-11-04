@@ -72,15 +72,19 @@ public class IndexController  {
 	        	System.out.println("fec c: " + pedido.getFecha_entrega());
     		
 	    		String resultset = pedidosDAO.crearPedido(pedido);
+	    		
+	    		detalle_pedido detalle = new detalle_pedido();
+	        	detalle.setId_pedido(pedidosDAO.getPedido(18845885));
+	        	detalle.setId_producto(productosDAO.getProducto(Integer.parseInt(id_producto)));
+	        	detalle.setCantidad(Integer.parseInt(cantidad));
+	        	
+	        	System.out.println("id pedido: " + pedidosDAO.getPedido(18845885).getId_pedido());
+	        	System.out.println("id producto: " + productosDAO.getProducto(Integer.parseInt(id_producto)));
+	        	System.out.println("cantidad: " + cantidad);
+	        	
+	        	resultset = pedidosDAO.asociarDetalle(detalle);
+	        	System.out.println(resultset);
         	}
-        	/*
-        	detalle_pedido detalle = new detalle_pedido();
-        	detalle.setId_pedido(pedidosDAO.getPedido(18845885));
-        	detalle.setId_producto(productosDAO.getProducto(Integer.parseInt(id_producto)));
-        	detalle.setCantidad(Integer.parseInt(cantidad));
-        	
-        	//pedidosDAO.asociarDetalle(detalle);
-*/
         	
         	System.out.println("id_producto: " + id_producto);
         	System.out.println("cantidad: " + cantidad);
