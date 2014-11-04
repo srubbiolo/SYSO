@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ues21.ferreteria.marca.Marcas;
+import com.ues21.ferreteria.usuarios.Usuarios;
 
 @Repository
 public class ProductosDAO {
@@ -34,6 +35,22 @@ public class ProductosDAO {
 		 return resultProductos;
 	 }
 	
+	@Transactional
+	public Productos getProducto(int id_producto){
+		 Session session = sessionFactory.getCurrentSession();
+		 @SuppressWarnings("rawtypes")
+		 List resultProductos = session.createQuery("from Productos where id_producto= '"+id_producto+"'").list();
+		 
+		 for(Iterator<Productos> i = resultProductos.iterator(); i.hasNext(); ) {
+			    Productos producto = i.next();
+			    if (producto.getId_producto() == id_producto)
+			    {
+			    	return producto;
+			    }
+			}
+		 return null;
+	 }
+	
 	 @Transactional
 	 public String agregarProducto(Productos producto){
 		 			
@@ -48,6 +65,6 @@ public class ProductosDAO {
 			} 
 			
 			return ret;
-	 } 
+	 }
 }
 

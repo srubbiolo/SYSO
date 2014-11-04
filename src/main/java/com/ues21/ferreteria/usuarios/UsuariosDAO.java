@@ -50,5 +50,21 @@ public class UsuariosDAO {
 			 //session.save(user);
 			 return user;
 	 }
+	 
+	 @Transactional 
+	 public Usuarios getUsuario(int dni){
+		 Session session = sessionFactory.getCurrentSession();
+		 
+		 List usuarios = session.createQuery("from Usuarios").list();
+		 
+		 for(Iterator<Usuarios> i = usuarios.iterator(); i.hasNext(); ) {
+			    Usuarios usuario = i.next();
+			    if (usuario.getDni() == dni)
+			    {
+			    	return usuario;
+			    }
+			}
+		 return null;
+	 }
 
 }
