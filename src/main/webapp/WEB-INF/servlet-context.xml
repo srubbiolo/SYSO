@@ -25,7 +25,7 @@
   <context:component-scan base-package="com.ues21.ferreteria.marca"/>
   <context:component-scan base-package="com.ues21.ferreteria.usuarios"/>
   <context:component-scan base-package="com.ues21.ferreteria.permisos"/>
-  <context:component-scan base-package="com.ues21.ferreteria.pedidos"/>  
+  <context:component-scan base-package="com.ues21.ferreteria.pedidos"/>
   <context:component-scan base-package="com.ues21.ferreteria.productos"/>
   <context:component-scan base-package="com.ues21.ferreteria.detalle_pedido"/>
    

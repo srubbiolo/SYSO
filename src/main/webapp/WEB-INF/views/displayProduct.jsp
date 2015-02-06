@@ -14,7 +14,7 @@
 <!--Scripts-->
 <script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
 
-<title>SYSFER-COMPRAR</title>
+<title>SYSFER-PRODUCTOS</title>
 </head>
 <body>
 
@@ -27,12 +27,12 @@
 				src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
 		<ul class="buttons">
-			<li><a href="/ferreteria/home.html" class="home">Vovler</a></li>
+			<li><a href="/ferreteria/index.html" class="home">Volver</a></li>
 		</ul>
 	</div>
 	<div class="mainContent" >
 		<h1>Productos</h1>
-		<form action="resultProductos" method="post">
+		<form action="displayProduct" method="post">
 			<label> Ingrese productos que filtrar: </label> <input type="text"
 				class="submitButton" name="nombre" /> <input type="submit" value="Buscar" />
 		</form>
@@ -48,15 +48,13 @@
 					<th>Marca</th>
 					<th>Precio</th>
 					<th>Cantidad disponible</th>
-					<th>Cantidad</th>
-					<th>Comprar</th>
 				</tr>
 			</thead>
 			<!-- END Table Header -->
 		
 			<!-- START Table Body -->
 			<tbody>
-			<c:forEach var="p" items="${resultProductos}">
+			<c:forEach var="p" items="${displayProduct}">
 				<tr>
 					<td>${p.getId_producto()}</td>
 					<td>${p.getNombre()}</td>
@@ -65,15 +63,14 @@
 					<td>${p.getPrecio()}</td>
 					<td>${p.getStock()}</td>
 					
-					<form action="resultProductos" method="post">
+					<form action="displayProduct" method="post">
 						<input type="hidden" name="id_producto" value="${p.getId_producto()}"/>
 						<!--  <input type="hidden" name="nombre" value="${p.getNombre()}"/>
 						<input type="hidden" name="desc" value="${p.getDescripcion()}"/>
 						<input type="hidden" name="marca" value="${p.getMarca().getNombre()}"/>
 						<input type="hidden" name="precio" value="${p.getPrecio()}"/>
 						<input type="hidden" name="stock" value="${p.getStock()}"/>-->
-						<td> <input type="text" class="submitButton" name="cantidad" /> </td>
-						<td> <input type="submit" value="Comprar este producto" /> </td>			
+		
 					</form>
 				</tr>
 				 </c:forEach>

@@ -30,7 +30,7 @@
 		</a>
 		<ul class="buttons">
 			<li><a href="/ferreteria/index.html" class="home">Home</a></li>
-			<li><a href="/ferreteria/resultProductos.html" class="productos">Productos</a></li>
+			<li><a href="/ferreteria/displayProduct.html" class="productos">Productos</a></li>
 		</ul>
 		
 		<a id="loginLink" href="/ferreteria/login.html"> Iniciar Sesión </a>

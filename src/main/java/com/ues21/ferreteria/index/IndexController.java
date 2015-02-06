@@ -99,5 +99,31 @@ public class IndexController  {
 	    model.addAttribute("resultProductos", null);
 	    return "resultProductos";
     }
+	@RequestMapping(value ="/displayProduct", method = RequestMethod.GET)
+    public String displayProduct(Model model){		
+
+		//List<Index> marcas = marcaDAO.listaMarcas();
+	    model.addAttribute("displayProduct", null);
+	    return "displayProduct";
+    }
+	
+	@RequestMapping(value ="/displayProduct", method = RequestMethod.POST)
+    public String displayProduct(@ModelAttribute("nombre")String nombre,
+    		@ModelAttribute("id_producto")String id_producto,
+    		@ModelAttribute("cantidad")String cantidad,
+                     BindingResult result,
+                     Model model){		
+
+	    List<Productos> productos = productosDAO.listaProductos(nombre);
+	    model.addAttribute("displayProduct", productos);
+       
+        if(result.hasErrors()){
+        	return"home";
+        }else{
+        	model.addAttribute("nombre",nombre);
+        	
+        		return"displayProduct";
+        }
+    }
 
 }

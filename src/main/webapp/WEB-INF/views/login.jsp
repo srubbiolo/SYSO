@@ -24,7 +24,7 @@
 		<a href="/ferreteria/home.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
-		<!--  <div id="user">Hola XXXXXX</div>-->
+		<div id="user"></div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/index.html" class="index">Volver</a></li>
 		</ul>

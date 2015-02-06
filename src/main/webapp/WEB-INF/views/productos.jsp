@@ -24,7 +24,7 @@
 		<a href="/ferreteria/home.html">
 			<img id="logo" src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
-		<div id="user">Hola XXXXXX</div>
+		<div id="user"></div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/home.html" class="home">Volver</a></li>
 		</ul>
@@ -42,7 +42,6 @@
 				<th>Marca</th>
 				<th>Precio</th>
 				<th>Cantiad en stock</th>
-				<th>Comprar</th>
 				
 			</tr>
 		</thead>
@@ -58,8 +57,6 @@
 				<td>${p.getMarca().getNombre()}</td>
 				<td>${p.getPrecio()}</td>
 				<td>${p.getStock()}</td>
-				<td>
-			</td>
 			</tr>
 			 </c:forEach>
 		</tbody>

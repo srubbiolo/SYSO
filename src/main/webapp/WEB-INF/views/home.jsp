@@ -27,7 +27,7 @@
 			<img id="logo" alt="" url="/home"
 				src='${pageContext.request.contextPath}/resources/images/logoFerreteria.png'>
 		</a>
-		<div id="user">Hola XXXXXX</div>
+		<div id="user"></div>
 		<ul class="buttons">
 			<li><a href="/ferreteria/marcas.html" class="productos">Listar Marcas</a></li>
 			<li><a href="/ferreteria/pedidos.html" class="productos">Listar Pedidos</a></li>
@@ -36,6 +36,7 @@
 			<li><a href="/ferreteria/registerUser.html" class="productos">Registrar Usuario</a></li>
 			<li><a href="/ferreteria/registerBrand.html" class="productos">Registrar Marca</a></li>
 			<li><a href="/ferreteria/registerProduct.html" class="productos">Registrar Producto</a></li>
+			<li><a href="/ferreteria/resultProductos.html" class="productos">Comprar Producto</a></li>
 			<li><a href="/ferreteria/index.html" class="productos">Salir</a></li>
 		</ul>
 	</div>
