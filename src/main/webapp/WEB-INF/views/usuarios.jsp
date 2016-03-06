@@ -11,8 +11,10 @@
 <link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/tablas.css' />
 
 <!--Scripts-->
-<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
-
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script>
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-ui.js'></script>
+<script src='${pageContext.request.contextPath}/resources/scripts/paging.js'></script>
+<script src='${pageContext.request.contextPath}/resources/scripts/paginationScript.js'></script>
 <title>LISTA-USUARIOS</title>
 </head>
 
@@ -31,7 +33,8 @@
 	</div>
 	<div class="mainContent" >
 		<h1>Usuarios</h1>
-	    <table cellspacing='0'>
+		
+	    <table id="paginationTable" cellspacing='0'>
 	
 		<!-- START Table Header -->
 		<thead>
@@ -43,17 +46,19 @@
 			</tr>
 		</thead>
 		<!-- END Table Header -->
-	
+		
 		<!-- START Table Body -->
-		<tbody>
-		<c:forEach var="u" items="${usuarios}">
-			<tr>
-				<td>${u.getId_Usuario()}</td>
-				<td>${u.getDni()}</td>
-				<td>${u.getEmail()}</td>
-				<td>${u.getId_permiso().getDescripcion()}</td>
-			</tr>
-			 </c:forEach>
+		<tbody" >
+		<div">
+			<c:forEach var="u" items="${usuarios}">
+				<tr>
+					<td>${u.getId_Usuario()}</td>
+					<td>${u.getDni()}</td>
+					<td>${u.getEmail()}</td>
+					<td>${u.getId_permiso().getDescripcion()}</td>
+				</tr>
+			</c:forEach>
+		</div>
 		</tbody>
 		<!-- END Table Body -->
 		</table>

@@ -13,6 +13,9 @@
 
 <!--Scripts-->
 <script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
+<script src='${pageContext.request.contextPath}/resources/scripts/jquery-ui.js'></script>
+<script src='${pageContext.request.contextPath}/resources/scripts/paging.js'></script>
+<script src='${pageContext.request.contextPath}/resources/scripts/paginationScript.js'></script>
 
 <title>SYSFER-PRODUCTOS</title>
 </head>
@@ -37,7 +40,7 @@
 				class="submitButton" name="nombre" /> <input type="submit" value="Buscar" />
 		</form>
 		<label>Resultado de la busqueda para : ${nombre}</label>
-	    <table cellspacing='0'>
+	    <table id="paginationTable" cellspacing='0'>
 			<div class="productsDisplay">
 			<!-- START Table Header -->
 			<thead>

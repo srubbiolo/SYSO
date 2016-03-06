@@ -1,6 +1,26 @@
 .mainContent {
 	text-align:center;
 }
+/*START styling of paging menu of table*/
+.paging-nav {
+  padding-top: 2px;
+}
+
+.paging-nav a {
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+  background: #187ed5;
+  font-weight: bold;
+}
+/*END styling of paging menu of table*/
 label {
 	background-color: #FFF;
 	opacity: 0.8;
