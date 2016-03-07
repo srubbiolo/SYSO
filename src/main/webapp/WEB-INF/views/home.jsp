@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -40,6 +42,22 @@
 			<li><a href="/ferreteria/index.html" class="productos">Salir</a></li>
 		</ul>
 	</div>
+	
+	<div style="float:right">
+	<c:choose>
+		<c:when test = "${empty loggedInUser.id_usuario }">
+			<a href="user?register">Register<spring:message code="homePage.registerLink"/></a>
+			<a href="login">Login</a>
+		</c:when>
+		
+		<c:otherwise>
+			Hello ${loggedInUser.id_usuario }! &nbsp;
+			<a href="cart">View Cart</a> &nbsp;
+			<a href="logout">Logout</a>
+		</c:otherwise>
+	</c:choose>
+</div>
+	
 	<div class="homeInfo" >
 		<h1>Bienvenido</h1>
 		
