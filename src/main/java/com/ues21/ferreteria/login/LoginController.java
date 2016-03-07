@@ -21,7 +21,6 @@ import com.ues21.ferreteria.usuarios.Usuarios;
 import com.ues21.ferreteria.usuarios.UsuariosDAO;
 
 @Controller
-@RequestMapping(value = "/login")
 public class LoginController  {
 	
 	@Autowired private LoginDAO loginDAO;
@@ -33,7 +32,7 @@ public class LoginController  {
 	    return "login";
 	  }
 	*/
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
     public String viewRegistration(Map<String, Object> model) {
         Login userForm = new Login();    
         model.put("userForm", userForm);
@@ -41,7 +40,7 @@ public class LoginController  {
         return "login";
     }
      
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String processRegistration(@ModelAttribute("userForm") Login user,
             Model model, HttpSession session) {
          
@@ -57,7 +56,7 @@ public class LoginController  {
         }
         else {
         	Usuarios usuario = usuariosDAO.getUsuario(user.getDni());
-        	session.setAttribute("loggedInUser", usuario.getId_Usuario());
+        	session.setAttribute("loggedInUser", usuario);
         	return "home";
         }
     }

@@ -45,15 +45,15 @@
 	
 	<div style="float:right">
 	<c:choose>
-		<c:when test = "${empty loggedInUser.id_usuario }">
+		<c:when test = "${empty loggedInUser.email }">
 			<a href="user?register">Register<spring:message code="homePage.registerLink"/></a>
 			<a href="login">Login</a>
 		</c:when>
 		
 		<c:otherwise>
-			Hello ${loggedInUser.id_usuario }! &nbsp;
-			<a href="cart">View Cart</a> &nbsp;
-			<a href="logout">Logout</a>
+			Hola, ${loggedInUser.email }! &nbsp;
+			<a href="cart">Ver Carrito</a> &nbsp;
+			<a href="logout">Salir</a>
 		</c:otherwise>
 	</c:choose>
 </div>
