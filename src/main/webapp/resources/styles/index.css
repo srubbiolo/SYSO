@@ -1,6 +1,29 @@
 /*
 	BACKGROUND IMAGE OPTIONS
 */
+#firechat-wrapper {
+	width: 400px;
+}
+
+.links {
+	padding-top: 20px;
+}
+
+#chat {
+	margin-right: 50px;
+	text-decoration: none;
+}
+
+#registrar {
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+#iniciarSesion {
+	margin-right: 20px;
+	text-decoration: none;
+}
+
 .backgroundImage {
 	background-image: url('../images/red-black-background.jpg');
     background-size: cover;

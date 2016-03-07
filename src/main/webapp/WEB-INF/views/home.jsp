@@ -10,12 +10,17 @@
 <!--Style Sheets-->
 <link href='${pageContext.request.contextPath}/resources/styles/owl.carousel.css' rel="stylesheet">
 <link href='${pageContext.request.contextPath}/resources/styles/owl.theme.css' rel="stylesheet">
-<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css' />
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/index.css'/>
+<link type="text/css" rel="stylesheet" href='${pageContext.request.contextPath}/resources/styles/chat/firechat.min.css'/>
 
 <!--Scripts-->
 <script src='${pageContext.request.contextPath}/resources/scripts/jquery-1.9.1.min.js'></script> 
 <script src='${pageContext.request.contextPath}/resources/scripts/owl.carousel.js'></script>
 <script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/script.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/chat/jquery.min.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/chat/firebase.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/chat/firechat.min.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath}/resources/scripts/chat/chat.js'></script>
 
 <title>SYSFER-HOME</title>
 </head>
@@ -46,8 +51,11 @@
 	<div style="float:right">
 	<c:choose>
 		<c:when test = "${empty loggedInUser.email }">
-			<a href="user?register">Register<spring:message code="homePage.registerLink"/></a>
-			<a href="login">Login</a>
+		<div class="links">
+			<a id="chat" href='#' onclick='login();'>Chatear con un asistente</a>
+			<a id="registrar" href="user?register">Registrarse<spring:message code="homePage.registerLink"/></a>
+			<a id="iniciarSesion" href="login">Iniciar sesión</a>
+		</div>
 		</c:when>
 		
 		<c:otherwise>
@@ -86,6 +94,6 @@
         
 	</section>
 
-
+<div id='firechat-wrapper'></div>
 </body>
 </html>
